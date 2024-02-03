@@ -39,7 +39,9 @@ mongoose
     console.error("Error connecting to the database:", error);
   });
 //
-
+app.get("/login",async (req, res) => {
+  res.send("hello")
+}
 app.post("/register", upload.single("avatar"), async (req, res) => {
   try {
     const hashedPassword = await bcryptjs.hash(req.body.password, 10);
