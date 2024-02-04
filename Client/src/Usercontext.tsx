@@ -36,7 +36,7 @@ export const UserProvider = ({ children }: Props) => {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        const res = await axios.get("https://https://community-steel.vercel.app/api/userId", {
+        const res = await axios.get("https://community-livid.vercel.app/api/userId", {
           withCredentials: true,
         });
   
@@ -55,7 +55,7 @@ export const UserProvider = ({ children }: Props) => {
   const fetchCurrentUser = useCallback(async () => {
     if (userInfo.userId) {
       try {
-        const res = await axios.get(`https://community-steel.vercel.app/api/userInfo/${userInfo.userId}`, {
+        const res = await axios.get(`https://community-livid.vercel.app/api/userInfo/${userInfo.userId}`, {
           withCredentials: true,
         });
 
