@@ -11,7 +11,7 @@ interface Props {
 const LikeButton = ({ postId, userLiked, TotalLikes }: Props) => {
   const [likes, setLikes] = useState(TotalLikes);
   const [liked, setLiked] = useState(userLiked);
-  
+  axios.defaults.withCredentials = true;
 
   const toggleLike = async () => {
 
