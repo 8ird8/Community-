@@ -32,7 +32,7 @@ const SideBar = () => {
     }
   };
   const profileImage = currentUserInfo
-    ? `https://community-livid.vercel.app/uploads/${currentUserInfo.avatar}`
+    ? `https://community-livid.vercel.app/${currentUserInfo.avatar}`
     : "";
   const profileName = currentUserInfo ? currentUserInfo.username : "";
   const pathto = `/myposts/${userInfo.userId}`;
