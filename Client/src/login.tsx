@@ -8,7 +8,7 @@ function Login() {
   const [password, setPassword] = useState();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const navigate = useNavigate();
-
+axios.defaults.withCredentials = true;
   const handleSumbit = async (e: any) => {
     e.preventDefault();
     try {
