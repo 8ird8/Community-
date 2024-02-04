@@ -79,7 +79,7 @@ function Home() {
                   post={post}
                   CurrentuserId={userInfo.userId}
                   creatorId={post.creator._id}
-                  avatarUrl={`https://community-livid.vercel.app/${post.creator.avatar}`}
+                  avatarUrl={`https://community-livid.vercel.app/uploads/${post.creator.avatar}`}
                   created_at={formatDate(
                     post.createdAt ? post.createdAt : "yyyy-MM-dd"
                   )}
