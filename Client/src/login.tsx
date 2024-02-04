@@ -12,7 +12,7 @@ axios.defaults.withCredentials = true;
   const handleSumbit = async (e: any) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://community-git-main-8ird8s-projects.vercel.app/login", {
+      const res = await axios.post("https://community-livid.vercel.app/login", {
         email,
         password,
         
