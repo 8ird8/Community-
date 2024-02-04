@@ -32,7 +32,7 @@ function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/posts", {
+        const res = await axios.get("https://community-steel.vercel.app/api/posts", {
           withCredentials: true,
         });
 
@@ -73,12 +73,12 @@ function Home() {
                 <Card
                   title={post.title}
                   description={post.description}
-                  imageUrl={`http://localhost:4000/uploads/${post.image}`}
+                  imageUrl={`https://community-steel.vercel.app/uploads/${post.image}`}
                   creator_name={post.creator.username}
                   post={post}
                   CurrentuserId={userInfo.userId}
                   creatorId={post.creator._id}
-                  avatarUrl={`http://localhost:4000/uploads/${post.creator.avatar}`}
+                  avatarUrl={`https://community-steel.vercel.app/uploads/${post.creator.avatar}`}
                   created_at={formatDate(
                     post.createdAt ? post.createdAt : "yyyy-MM-dd"
                   )}
