@@ -6,7 +6,8 @@ import SideBar from "./sidebar";
 const AddPost = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const fileInputRef = useRef<HTMLInputElement>(null); // Create a ref for the file input
+  const fileInputRef = useRef<HTMLInputElement>(null); 
+  axios.defaults.withCredentials = true;
 
   const navigate = useNavigate();
 
