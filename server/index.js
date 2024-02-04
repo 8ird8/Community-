@@ -15,7 +15,7 @@ const { userInfo } = require("os");
 const app = express();
 
 const corsOptions = {
-  origin: ["https://community-phaw.vercel.app"],
+  origin: ["https://community-phaw.vercel.app/login"],
   methods : ["POST", "GET"],
   credentials: true,
 };
