@@ -17,7 +17,7 @@ const UpdatePost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/posts/${postId}`, {
+        const response = await axios.get(`https://community-livid.vercel.app/posts/${postId}`, {
           withCredentials: true,
         });
         if (response.status === 200 && response.data.post) {
@@ -53,7 +53,7 @@ const UpdatePost = () => {
     }
 
     try {
-      const res = await axios.put(`http://localhost:4000/updatePost/${postId}`, formData, {
+      const res = await axios.put(`https://community-livid.vercel.app/updatePost/${postId}`, formData, {
         withCredentials: true,
       });
       if (res.status === 200) {
@@ -106,7 +106,7 @@ const UpdatePost = () => {
               <span className="mr-2 text-indigo-900 font-600">
                 Upload Image
               </span>
-              <img src="../public/images.png" alt="image" className="w-8 h-8" />
+              <img src="images.png" alt="image" className="w-8 h-8" />
               <input
                 type="file"
                 className="hidden"
