@@ -36,7 +36,7 @@ const MyPosts = () => {
     const fetchPosts = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:4000/api/posts/user/${userId}`,
+          `https://community-livid.vercel.app/api/posts/user/${userId}`,
           {
             withCredentials: true,
           }
@@ -72,35 +72,9 @@ const MyPosts = () => {
   };
 
 
-  //   return (
-  //     <div  className="flex justify-start">
-  //         <SideBar />
-  //         {message && <p className=" mt-6  w-full text-5xl text-center font-600 ">{message}</p>}
-  //         <div className="flex m-auto justify-center w-1/2 mt-8">
+  
 
-  //         <div className=" grid  gap-10   " >
-
-  //           {posts.map((post) => (
-  //             <div key={post._id} className="post-container">
-  //               <Card
-  //                 title={post.title}
-  //                 description={post.description}
-  //                 imageUrl={`http://localhost:4000/uploads/${post.image}`}
-  //                 creator_name={post.username}
-  //                 post = {post}
-  //                 CurrentuserId={userInfo.userId}
-  //                 creatorId= {post.creator._id}
-  //                 avatarUrl={`http://localhost:4000/uploads/${post.creator.avatar}`}
-  //               />
-
-  //             </div>
-  //           ))}
-
-  //         </div>
-  //         </div>
-  //     </div>
-
-  //   )
+ 
   return (
     <div className="flex justify-start">
       <div className="flex  ">
@@ -115,12 +89,12 @@ const MyPosts = () => {
                   <Card
                     title={post.title}
                     description={post.description}
-                    imageUrl={`http://localhost:4000/uploads/${post.image}`}
+                    imageUrl={`https://community-livid.vercel.app/uploads/${post.image}`}
                     creator_name={post.creator.username}
                     post={post}
                     CurrentuserId={userInfo.userId}
                     creatorId={post.creator._id}
-                    avatarUrl={`http://localhost:4000/uploads/${post.creator.avatar}`}
+                    avatarUrl={`https://community-livid.vercel.app/uploads/${post.creator.avatar}`}
                     created_at={formatDate(post.createdAt)}
                   />
                 </div>
