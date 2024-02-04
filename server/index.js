@@ -24,7 +24,7 @@ app.use("/uploads", express.static("uploads"));
 app.use("/public", express.static("public"));
 
 app.use(cookieParser());
-app.use(express.json()); // Add this line to parse JSON requests
+app.use(express.json()); 
 
 mongoose
   .connect(
@@ -113,7 +113,12 @@ app.post("/login", async (req, res) => {
           TOKEN_SECRET,
           { expiresIn: TOKEN_EXPIRY }
         );
-        res.cookie("token", token);
+        res.cookie("token", token ,{
+              httpOnly: true,
+              secure: true, 
+              sameSite: 'None', 
+              maxAge: 3600000, // Example: 1 hour
+        });
 
         res
           .status(200)
