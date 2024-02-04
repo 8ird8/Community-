@@ -52,7 +52,7 @@ function Home() {
     };
     fetchPosts();
     fetchUserInfo();
-  }, [posts]);
+  }, [posts,fetchUserInfo]);
 
   const formatDate = (dateString:string)  => {
     return format(new Date(dateString), "MMMM dd 'at' p");
@@ -74,12 +74,12 @@ function Home() {
                 <Card
                   title={post.title}
                   description={post.description}
-                  imageUrl={`https://community-livid.vercel.app/uploads/${post.image}`}
+                  imageUrl={`https://community-livid.vercel.app/${post.image}`}
                   creator_name={post.creator.username}
                   post={post}
                   CurrentuserId={userInfo.userId}
                   creatorId={post.creator._id}
-                  avatarUrl={`https://community-livid.vercel.app/uploads/${post.creator.avatar}`}
+                  avatarUrl={`https://community-livid.vercel.app/${post.creator.avatar}`}
                   created_at={formatDate(
                     post.createdAt ? post.createdAt : "yyyy-MM-dd"
                   )}
