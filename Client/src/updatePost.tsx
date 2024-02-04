@@ -12,6 +12,7 @@ const UpdatePost = () => {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
   const { fetchUserInfo } = useContext(UserContext);
+  axios.defaults.withCredentials = true;
   
 
   useEffect(() => {
