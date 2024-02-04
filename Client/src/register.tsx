@@ -22,7 +22,7 @@ function SignUp() {
     
   
     try {
-      const res = await axios.post("http://localhost:4000/register", formData, {
+      const res = await axios.post("https://community-livid.vercel.app/register", formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
