@@ -17,7 +17,7 @@ const SideBar = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.get("https://community-steel.vercel.app/logout", {
+      const res = await axios.get("https://community-livid.vercel.app/logout", {
         withCredentials: true,
       });
 
@@ -32,7 +32,7 @@ const SideBar = () => {
     }
   };
   const profileImage = currentUserInfo
-    ? `https://community-steel.vercel.app/uploads/${currentUserInfo.avatar}`
+    ? `https://community-livid.vercel.app/uploads/${currentUserInfo.avatar}`
     : "";
   const profileName = currentUserInfo ? currentUserInfo.username : "";
   const pathto = `/myposts/${userInfo.userId}`;
