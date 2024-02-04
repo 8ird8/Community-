@@ -16,6 +16,7 @@ const UpdateUser = ({ userId, CurrentUsername }: UpdateProp) => {
   const [password, setPassword] = useState("");
   // const [Confirmpass, setCpassword] = useState("");
   const [bio, setBio] = useState("");
+  axios.defaults.withCredentials = true;
   
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [message, setMessage] = useState("");
