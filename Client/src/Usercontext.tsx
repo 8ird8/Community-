@@ -31,8 +31,10 @@ export const UserProvider = ({ children }: Props) => {
   const [userInfo, setUserInfo] = useState<UserInfo>({ userId: '', avatar: '', username: '', email: '', bio: '' });
   const [currentUserInfo, setCurrentUserInfo] = useState<UserInfo>({ userId: '', avatar: '', username: '', email: '', bio: '' });
   const token = localStorage.getItem('token');
+  axios.defaults.withCredentials = true;
 
   const fetchUserInfo = useCallback(async () => {
+    
     const token = localStorage.getItem('token');
     if (token) {
       try {
