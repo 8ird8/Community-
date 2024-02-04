@@ -52,7 +52,7 @@ function Home() {
     };
     fetchPosts();
     fetchUserInfo();
-  }, [posts, fetchUserInfo]);
+  }, [posts]);
 
   const formatDate = (dateString:string)  => {
     return format(new Date(dateString), "MMMM dd 'at' p");
