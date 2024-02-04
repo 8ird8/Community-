@@ -74,7 +74,7 @@ function Home() {
                 <Card
                   title={post.title}
                   description={post.description}
-                  imageUrl={`https://community-livid.vercel.app/${post.image}`}
+                  imageUrl={`https://community-livid.vercel.app/uploads/${post.image}`}
                   creator_name={post.creator.username}
                   post={post}
                   CurrentuserId={userInfo.userId}
