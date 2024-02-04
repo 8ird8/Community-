@@ -6,6 +6,7 @@ import axios from "axios";
 const ProfilePage = () => {
   const { userInfo, currentUserInfo,fetchCurrentUser, fetchUserInfo } = useContext(UserContext);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  axios.defaults.withCredentials = true;
 
   useEffect(() => {
     
