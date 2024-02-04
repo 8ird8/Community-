@@ -49,11 +49,11 @@ const SideBar = () => {
     { title: "My Posts", src: "mine.png", path: pathto },
     {
       title: "User",
-      src: "../public/user.png",
+      src: "user.png",
       path: "/updateUser",
       gap: true,
     },
-    { title: "Logout", src: "../public/logout.png", onClick: handleLogout },
+    { title: "Logout", src: "logout.png", onClick: handleLogout },
   ];
   const token = localStorage.getItem("token");
   useEffect(() => {
@@ -71,14 +71,14 @@ const SideBar = () => {
           } bg-dark-purple h-screen p-5 pt-8 relative duration-300 transition-all`} 
         >
           <img
-            src="../public/control.png"
+            src="control.png"
             className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
            border-2 rounded-full  ${!open && "rotate-180"}`}
             onClick={() => setOpen(!open)}
           />
           <div className="flex gap-x-4 items-center">
             <img
-              src="../public/logo.png"
+              src="logo.png"
               className={`cursor-pointer duration-500 ${
                 open && "rotate-[360deg]"
               }`}
