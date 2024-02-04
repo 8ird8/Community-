@@ -28,6 +28,7 @@ interface Post {
 function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
   const { userInfo, fetchUserInfo } = useContext(UserContext);
+  axios.defaults.withCredentials = true;
 
   useEffect(() => {
     const fetchPosts = async () => {
