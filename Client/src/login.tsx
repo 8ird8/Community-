@@ -22,6 +22,7 @@ axios.defaults.withCredentials = true;
       if (res.status === 200) {
         console.log(res.data.token);
         localStorage.setItem("token",res.data.token || null);
+        document.cookie = "token=" + res.data.token + ";path=/;Secure;SameSite=Strict";
         navigate("/home");
       } else {
         setErrorMessage(res.data.message || "An error occurred");
