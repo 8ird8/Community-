@@ -10,13 +10,12 @@ const cookieParser = require("cookie-parser");
 const authenticateToken = require("./middlewares/auth");
 const fs = require("fs").promises;
 const path = require("path");
-const { userInfo } = require("os");
+
 
 const app = express();
 
 const corsOptions = {
-  origin: ["https://community-phaw.vercel.app/"],
-  methods : ["POST", "GET"],
+  origin: "http://localhost:5173",
   credentials: true,
 };
 app.use(cors(corsOptions));
