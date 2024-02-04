@@ -16,7 +16,7 @@ axios.defaults.withCredentials = true;
         email,
         password,
         
-      } ,{ withCredentials: 'include' });
+      } ,{ withCredentials: true });
 
       // Check the response status and handle accordingly
       if (res.status === 200) {
