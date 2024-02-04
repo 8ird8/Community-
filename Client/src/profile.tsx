@@ -25,7 +25,7 @@ const ProfilePage = () => {
       try {
         const userId = userInfo?.userId; 
         const res = await axios.put(
-          `http://localhost:4000/update/${userId}`,
+          `https://community-livid.vercel.app/update/${userId}`,
           formData,
           { withCredentials: true }
         );
@@ -53,7 +53,7 @@ const ProfilePage = () => {
           <div className="flex flex-col">
             <div className="flex justify-center relative">
               <img
-                src={`http://localhost:4000/uploads/${currentUserInfo?.avatar}`}
+                src={`https://community-livid.vercel.app/uploads/${currentUserInfo?.avatar}`}
                 alt="Avatar"
                 className="w-32 h-32 rounded-full object-cover border-2 border-gray-300"
               />
