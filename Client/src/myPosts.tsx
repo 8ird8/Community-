@@ -30,7 +30,7 @@ const MyPosts = () => {
   const { userInfo, fetchUserInfo } = useContext(UserContext);
   const { userId } = useParams();
   const [message, setMessage] = useState("");
-  // const token = localStorage.getItem("token");
+  axios.defaults.withCredentials = true;
 
   useEffect(() => {
     const fetchPosts = async () => {
