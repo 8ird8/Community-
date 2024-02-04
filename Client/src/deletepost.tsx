@@ -10,14 +10,14 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({ postId }) => {
   const navigate = useNavigate();
   const handleDelete = async () => {
     try {
-      const res = await axios.delete(`http://localhost:4000/posts/${postId}`, {
+      const res = await axios.delete(`https://community-livid.vercel.app/posts/${postId}`, {
         withCredentials: true,
       });
       if (res.status === 403) {
         console.error("You are not allowed");
         navigate("/home");
       } else {
-        console.log("delleted successfully");
+        console.log("deleted successfully");
         
       }
     } catch (error) {
@@ -28,7 +28,7 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({ postId }) => {
 
   return (
     <button onClick={handleDelete}>
-      <img src="../public/trash.png" alt="trash" className="w-6 h-6" />
+      <img src="trash.png" alt="trash" className="w-6 h-6" />
     </button>
   );
 };
