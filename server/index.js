@@ -16,7 +16,7 @@ const app = express();
 
 const corsOptions = {
   origin: ["https://community-q26e-front.vercel.app"],
-  methods : [ "POST", "GET"]
+  methods : [ "POST", "GET"],
   credentials: true,
 };
 app.use(cors(corsOptions));
