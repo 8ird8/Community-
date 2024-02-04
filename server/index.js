@@ -21,7 +21,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 app.use("/uploads", express.static("uploads"));
-app.use("/public", express.static("public"));
+
 
 app.use(cookieParser());
 app.use(express.json()); 
