@@ -26,7 +26,7 @@ const ProfilePage = () => {
       try {
         const userId = userInfo?.userId; 
         const res = await axios.put(
-          `https://community-livid.vercel.app/update/${userId}`,
+          `https://platform-gqkk.onrender.com/update/${userId}`,
           formData,
           { withCredentials: true }
         );
@@ -54,7 +54,7 @@ const ProfilePage = () => {
           <div className="flex flex-col">
             <div className="flex justify-center relative">
               <img
-                src={`https://community-livid.vercel.app/uploads/${currentUserInfo?.avatar}`}
+                src={`https://platform-gqkk.onrender.com/uploads/${currentUserInfo?.avatar}`}
                 alt="Avatar"
                 className="w-32 h-32 rounded-full object-cover border-2 border-gray-300"
               />
