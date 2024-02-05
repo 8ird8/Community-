@@ -17,7 +17,7 @@ const SideBar = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.get("https://community-livid.vercel.app/logout", {
+      const res = await axios.get("https://platform-gqkk.onrender.com/logout", {
         withCredentials: true,
       });
 
@@ -32,7 +32,7 @@ const SideBar = () => {
     }
   };
   const profileImage = currentUserInfo
-    ? `https://community-livid.vercel.app/${currentUserInfo.avatar}`
+    ? `https://platform-gqkk.onrender.com/${currentUserInfo.avatar}`
     : "";
   const profileName = currentUserInfo ? currentUserInfo.username : "";
   const pathto = `/myposts/${userInfo.userId}`;
