@@ -22,7 +22,7 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({ postId }) => {
         
       }
     } catch (error) {
-      console.log(" u D'ONT HAVE THE ACCES :", error);
+      console.log(" error during the delete  :", error);
       // Handle error or show a notification to the user
     }
   };
