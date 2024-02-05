@@ -15,7 +15,7 @@ const path = require("path");
 const app = express();
 
 const corsOptions = {
-  origin: ["https://community-q26e-front.vercel.app"],
+  origin: ["https://community-zbp5-front.vercel.app"],
   methods : [ "POST", "GET"],
   credentials: true,
 };
