@@ -11,7 +11,7 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({ postId }) => {
   axios.defaults.withCredentials = true;
   const handleDelete = async () => {
     try {
-      const res = await axios.delete(`https://community-livid.vercel.app/posts/${postId}`, {
+      const res = await axios.delete(`https://platform-gqkk.onrender.com/posts/${postId}`, {
         withCredentials: true,
       });
       if (res.status === 403) {
