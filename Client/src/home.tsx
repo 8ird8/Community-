@@ -33,7 +33,7 @@ function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get("https://community-livid.vercel.app/api/posts", {
+        const res = await axios.get("https://platform-gqkk.onrender.com/api/posts", {
           withCredentials: true,
         });
 
@@ -74,12 +74,12 @@ function Home() {
                 <Card
                   title={post.title}
                   description={post.description}
-                  imageUrl={`https://community-livid.vercel.app/uploads/${post.image}`}
+                  imageUrl={`https://platform-gqkk.onrender.com/uploads/${post.image}`}
                   creator_name={post.creator.username}
                   post={post}
                   CurrentuserId={userInfo.userId}
                   creatorId={post.creator._id}
-                  avatarUrl={`https://community-livid.vercel.app/uploads/${post.creator.avatar}`}
+                  avatarUrl={`https:https://platform-gqkk.onrender.com/${post.creator.avatar}`}
                   created_at={formatDate(
                     post.createdAt ? post.createdAt : "yyyy-MM-dd"
                   )}
