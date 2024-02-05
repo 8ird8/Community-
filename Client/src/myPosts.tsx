@@ -36,7 +36,7 @@ const MyPosts = () => {
     const fetchPosts = async () => {
       try {
         const res = await axios.get(
-          `https://community-livid.vercel.app/api/posts/user/${userId}`,
+          `https://platform-gqkk.onrender.com/api/posts/user/${userId}`,
           {
             withCredentials: true,
           }
