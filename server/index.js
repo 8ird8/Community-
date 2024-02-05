@@ -116,7 +116,7 @@ app.post("/login", async (req, res) => {
         res.cookie("token", token ,{
               httpOnly: true,
               secure: true, 
-              sameSite: 'None', 
+              // sameSite: 'None', 
               maxAge: 3600000, // Example: 1 hour
         });
 
