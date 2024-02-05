@@ -96,7 +96,7 @@ const MyPosts = () => {
                     post={post}
                     CurrentuserId={userInfo.userId}
                     creatorId={post.creator._id}
-                    avatarUrl={`${baseUrl}/uploads/${post.creator.avatar}`}
+                    avatarUrl={`${process.env.REACT_APP_BASE_URL}/uploads/${post.creator.avatar}`}
                     created_at={formatDate(post.createdAt)}
                   />
                 </div>
