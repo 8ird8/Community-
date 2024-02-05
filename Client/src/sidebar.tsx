@@ -32,7 +32,7 @@ const SideBar = () => {
     }
   };
   const profileImage = currentUserInfo
-    ? `https://platform-gqkk.onrender.com/${currentUserInfo.avatar}`
+    ? `https://platform-gqkk.onrender.com/uploads/${currentUserInfo.avatar}`
     : "";
   const profileName = currentUserInfo ? currentUserInfo.username : "";
   const pathto = `/myposts/${userInfo.userId}`;
