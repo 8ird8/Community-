@@ -60,7 +60,7 @@ const SideBar = () => {
     
     fetchUserInfo();
     fetchCurrentUser();
-  }, [ userInfo.userId]);
+  }, [token, userInfo.userId]);
 
   return (
     <div className="flex">
