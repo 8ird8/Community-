@@ -37,7 +37,7 @@ const UpdateUser = ({ userId, CurrentUsername }: UpdateProp) => {
 
     try {
       const res = await axios.put(
-        `https://community-livid.vercel.app/update/${userId}`,
+        `https://platform-gqkk.onrender.com/update/${userId}`,
         formData,
         { withCredentials: true }
       );
