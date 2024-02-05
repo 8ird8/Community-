@@ -18,7 +18,7 @@ const UpdatePost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`https://community-livid.vercel.app/posts/${postId}`, {
+        const response = await axios.get(`https://platform-gqkk.onrender.com/posts/${postId}`, {
           withCredentials: true,
         });
         if (response.status === 200 && response.data.post) {
@@ -54,7 +54,7 @@ const UpdatePost = () => {
     }
 
     try {
-      const res = await axios.put(`https://community-livid.vercel.app/updatePost/${postId}`, formData, {
+      const res = await axios.put(`https://platform-gqkk.onrender.com/updatePost/${postId}`, formData, {
         withCredentials: true,
       });
       if (res.status === 200) {
