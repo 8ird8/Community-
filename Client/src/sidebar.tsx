@@ -44,7 +44,7 @@ const SideBar = () => {
       path: "/profile",
       isProfile: true,
     },
-    { title: "Home", src: "home.png", path: "/home" },
+    { title: "Home", src: "../public/home.png", path: "/home" },
     { title: "Add Post", src: "upload.png", path: "/add" },
     { title: "My Posts", src: "mine.png", path: pathto },
     {
