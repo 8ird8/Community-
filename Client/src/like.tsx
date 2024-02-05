@@ -16,7 +16,7 @@ const LikeButton = ({ postId, userLiked, TotalLikes }: Props) => {
   const toggleLike = async () => {
 
     try {
-      const res = await axios.post(`https://community-livid.vercel.app/api/posts/${postId}/like`,  {
+      const res = await axios.post(`https://platform-gqkk.onrender.com/api/posts/${postId}/like`,  {
         
         
       },{withCredentials: true});
