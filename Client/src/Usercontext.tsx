@@ -70,7 +70,7 @@ export const UserProvider = ({ children }: Props) => {
         console.error("Error fetching user information:", error);
       }
     }
-  }, [ userInfo]);
+  }, [ userInfo.userId]);
 
   return (
     <UserContext.Provider value={{ userInfo, currentUserInfo, fetchUserInfo, fetchCurrentUser }}>
