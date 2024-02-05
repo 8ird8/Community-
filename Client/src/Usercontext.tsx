@@ -52,7 +52,7 @@ export const UserProvider = ({ children }: Props) => {
         console.error("Error fetching user ID:", error);
       }
     }
-  }, []);
+  }, [token]);
 
   const fetchCurrentUser = useCallback(async () => {
     if (userInfo.userId) {
