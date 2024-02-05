@@ -30,6 +30,8 @@ const MyPosts = () => {
   const { userInfo, fetchUserInfo } = useContext(UserContext);
   const { userId } = useParams();
   const [message, setMessage] = useState("");
+  const baseUrl = process.env.REACT_APP_BASE_URL;
+
   axios.defaults.withCredentials = true;
 
   useEffect(() => {
@@ -89,12 +91,12 @@ const MyPosts = () => {
                   <Card
                     title={post.title}
                     description={post.description}
-                    imageUrl={`https://community-livid.vercel.app/uploads/${post.image}`}
+                    imageUrl={`${baseUrl}/uploads/${post.image}`}
                     creator_name={post.creator.username}
                     post={post}
                     CurrentuserId={userInfo.userId}
                     creatorId={post.creator._id}
-                    avatarUrl={`https://community-livid.vercel.app/uploads/${post.creator.avatar}`}
+                    avatarUrl={`${baseUrl}/uploads/${post.creator.avatar}`}
                     created_at={formatDate(post.createdAt)}
                   />
                 </div>
