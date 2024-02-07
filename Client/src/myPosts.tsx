@@ -30,7 +30,7 @@ const MyPosts = () => {
   const { userInfo, fetchUserInfo } = useContext(UserContext);
   const { userId } = useParams();
   const [message, setMessage] = useState("");
-  const baseUrl = import.meta.env.VITE_BASE_URL;;
+  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   axios.defaults.withCredentials = true;
 
