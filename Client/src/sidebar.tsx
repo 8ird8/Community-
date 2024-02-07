@@ -12,6 +12,7 @@ const SideBar = () => {
     useContext(UserContext);
  
   const navigate = useNavigate();
+  const assetsBaseUrl = import.meta.env.VITE_ASSETS_URL;
 
   const handleLogout = async (e: any) => {
     e.preventDefault();
@@ -44,7 +45,7 @@ const SideBar = () => {
       path: "/profile",
       isProfile: true,
     },
-    { title: "Home", src: "home.png", path: "/home" },
+    { title: "Home", src: `${assetsBaseUrl}/home.png`, path: "/home" },
     { title: "Add Post", src: "upload.png", path: "/add" },
     { title: "My Posts", src: "mine.png", path: pathto },
     {
