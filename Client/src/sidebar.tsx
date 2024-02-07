@@ -50,7 +50,7 @@ const SideBar = () => {
     { title: "My Posts", src: `${assetsBaseUrl}/mine.png`, path: pathto },
     {
       title: "User",
-      src: "user.png",
+      src: `${assetsBaseUrl}/user.png`,
       path: "/updateUser",
       gap: true,
     },
