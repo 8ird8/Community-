@@ -16,7 +16,7 @@ const app = express();
 
 const corsOptions = {
   origin: ["https://community-zbp5-front.vercel.app"],
-  methods : [ "POST", "GET"],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
 app.use(cors(corsOptions));
