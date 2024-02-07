@@ -8,7 +8,8 @@ interface DeleteButtonProps {
 
 const DeleteButton: React.FC<DeleteButtonProps> = ({ postId }) => {
   const navigate = useNavigate();
-  const baseUrl = import.meta.env.VITE_BASE_URL;;
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+  const assetsBaseUrl = import.meta.env.VITE_ASSETS_URL;
   axios.defaults.withCredentials = true;
   const handleDelete = async () => {
     try {
