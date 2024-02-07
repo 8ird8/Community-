@@ -30,7 +30,7 @@ const MyPosts = () => {
   const { userInfo, fetchUserInfo } = useContext(UserContext);
   const { userId } = useParams();
   const [message, setMessage] = useState("");
-  const baseUrl = process.env.REACT_APP_BASE_URL;
+  const baseUrl = import.meta.env.VITE_BASE_URL;;
 
   axios.defaults.withCredentials = true;
 
@@ -96,7 +96,7 @@ const MyPosts = () => {
                     post={post}
                     CurrentuserId={userInfo.userId}
                     creatorId={post.creator._id}
-                    avatarUrl={`${process.env.REACT_APP_BASE_URL}/uploads/${post.creator.avatar}`}
+                    avatarUrl={`${baseUrl}/uploads/${post.creator.avatar}`}
                     created_at={formatDate(post.createdAt)}
                   />
                 </div>
