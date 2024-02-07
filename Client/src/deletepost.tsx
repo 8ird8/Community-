@@ -31,7 +31,7 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({ postId }) => {
 
   return (
     <button onClick={handleDelete}>
-      <img src="trash.png" alt="trash" className="w-6 h-6" />
+      <img src=`${assetsBaseUrl}/trash.png` alt="trash" className="w-6 h-6" />
     </button>
   );
 };
