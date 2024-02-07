@@ -8,10 +8,11 @@ interface DeleteButtonProps {
 
 const DeleteButton: React.FC<DeleteButtonProps> = ({ postId }) => {
   const navigate = useNavigate();
+  const baseUrl = import.meta.env.VITE_BASE_URL;;
   axios.defaults.withCredentials = true;
   const handleDelete = async () => {
     try {
-      const res = await axios.delete(`https://platform-gqkk.onrender.com/posts/${postId}`, {
+      const res = await axios.delete(`${baseUrl}/posts/${postId}`, {
         withCredentials: true,
       });
       if (res.status === 403) {
