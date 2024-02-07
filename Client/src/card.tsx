@@ -77,7 +77,7 @@ const Card: React.FC<CardProps> = ({
                   className="  rounded-xl "
                 >
                   <img
-                    src=`${assetsBaseUrl}/pencil.png`
+                    src={`${assetsBaseUrl}/pencil.png`}
                     alt="edit"
                     className="w-6 h-6"
                   />
