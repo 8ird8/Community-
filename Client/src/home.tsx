@@ -29,6 +29,8 @@ function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
   const { userInfo, fetchUserInfo } = useContext(UserContext);
   axios.defaults.withCredentials = true;
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -74,7 +76,7 @@ function Home() {
                 <Card
                   title={post.title}
                   description={post.description}
-                  imageUrl={`https://platform-gqkk.onrender.com/uploads/${post.image}`}
+                  imageUrl={`${baseUrl}/uploads/${post.image}`}
                   creator_name={post.creator.username}
                   post={post}
                   CurrentuserId={userInfo.userId}
